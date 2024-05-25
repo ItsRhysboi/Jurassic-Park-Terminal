@@ -11,18 +11,21 @@ set /p jp="> "
 if "%jp%" == "access security" goto attempt1
 if "%jp%" == "cheat" goto attempt3
 Echo %jp%: Command not found
+goto main
 
 :attempt1
 Echo access: PERMISSION DENIED.
 set /p jp="> "
 if "%jp%" == "access security grid" goto attempt2
 Echo %jp%: Command not found
+goto attempt1
 
 :attempt2
 Echo access: PERMISSION DENIED.
 set /p jp="> "
 if "%jp%" == "access main security grid" goto attempt3
 Echo %jp%: Command not found
+goto attempt2
 
 :attempt3
 Echo access: PERMISSION DENIED....and....
